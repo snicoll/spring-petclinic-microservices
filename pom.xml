@@ -31,6 +31,7 @@
 
         <spring-boot.version>2.3.0.RC1</spring-boot.version>
         <spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
+        <wavefront.version>2.0.0-RC1</wavefront.version>
 
         <maven-surefire-plugin.version>2.22.0</maven-surefire-plugin.version>
 
@@ -43,6 +44,13 @@
 
     <dependencyManagement>
         <dependencies>
+			<dependency>
+				<groupId>com.wavefront</groupId>
+				<artifactId>wavefront-spring-boot-bom</artifactId>
+				<version>${wavefront.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
